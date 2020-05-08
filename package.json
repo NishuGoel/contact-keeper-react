@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "'Nishu <'nishu0505@gmail.com'>",
@@ -15,6 +18,7 @@
     "config": "3.3.1",
     "express": "4.17.1",
     "express-validation": "3.0.2",
+    "express-validator": "6.4.1",
     "mongoose": "5.9.11"
   },
   "devDependencies": {
